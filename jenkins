@@ -16,6 +16,9 @@ node {
  stage('Maven Test') {
     sh 'mvn test'
  }
+  stage('Maven install') {
+    sh 'mvn install'
+ }
 
  stage('Maven Package') {
   sh 'mvn package'
