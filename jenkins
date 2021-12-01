@@ -20,4 +20,7 @@ node {
  stage('Maven Package') {
   sh 'mvn package'
  }
+ stage('Archive Artifact') {
+  archiveArtifacts artifacts: 'target/devops-trial.war', followSymlinks: false
+ }
 }
