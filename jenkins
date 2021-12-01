@@ -1,0 +1,23 @@
+node {
+    // some block
+
+ stage('Git ChechOut') {
+  git branch: 'main', url: 'https://github.com/rohit7887/Docker-Trail.git' 
+ }
+ 
+ stage('Maven Clean') {
+  sh 'mvn clean'
+ }
+
+ stage('Maven Compile') {
+  sh 'mvn compile'
+ }
+ 
+ stage('Maven Test') {
+    sh 'mvn test'
+ }
+
+ stage('Maven Package') {
+  sh 'mvn package'
+ }
+}
