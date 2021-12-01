@@ -1,0 +1,9 @@
+---
+
+version: '2' 
+
+services: 
+  devops:
+    build: . 
+    ports:
+      - '30099:8080'
