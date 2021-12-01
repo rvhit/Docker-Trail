@@ -26,4 +26,7 @@ node {
  stage('Archive Artifact') {
   archiveArtifacts artifacts: 'target/DevOps-Jenkins-Integration.jar', followSymlinks: false
  }
+ stage('Docker Deployment') {
+  sh 'docker-compose up -d --build'
+ }
 }
