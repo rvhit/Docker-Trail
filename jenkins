@@ -24,6 +24,6 @@ node {
   sh 'mvn package'
  }
  stage('Archive Artifact') {
-  archiveArtifacts artifacts: 'target/DevOps-Jenkins-Integration.war', followSymlinks: false
+  archiveArtifacts artifacts: 'target/DevOps-Jenkins-Integration.jar', followSymlinks: false
  }
 }
